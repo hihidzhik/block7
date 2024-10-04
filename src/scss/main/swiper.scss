@@ -1,0 +1,473 @@
+@import 'src/scss/global/_variables.scss';
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-swiper;
+}
+
+.swiper {
+  padding-bottom: 16px;
+  font-family: 'TT Lakes', sans-serif;
+}
+
+.swiper__title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 24px;
+  background: linear-gradient(to left, $background-color, $background-swiper);
+  color: $lang-link-active-color;
+  font-size: 16px;
+  font-weight: inherit;
+  text-transform: uppercase;
+  text-align: left;
+  border-top: 1px solid $border-line-color;
+  padding: 16px 16px 16px 24px;
+  margin: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+  border-radius: 8px;
+  border: 1px solid $swiper-slide-border;
+  padding: 16px;
+  width: 240px;
+  height: 72px;
+  box-sizing: border-box;
+  margin-right: 16px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: $background-swiper;
+  padding: 16px;
+}
+
+.swiper-gradient {
+  position: relative;
+}
+
+.swiper-gradient:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 26px;
+  background: linear-gradient(to left, $background-swiper, transparent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.swiper-pagination {
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background-color: $swiper-pagination-bullet;
+  margin: 0 4px;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $swiper-pagination-bullet-active;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-link:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.button-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  margin-left: 24px;
+  padding: 0;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.button-toggle img {
+  transition: transform 0.3s ease;
+}
+
+.button-toggle__text {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: 500;
+  color: $button-toggle-color;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button-toggle__text:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.button-toggle.expanded {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: 500;
+  color: $button-toggle-color;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button-toggle.expanded img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+//swiper2
+.slide-different {
+  width: 238px;
+  height: 158px;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  font-weight: 500;
+}
+
+.right-link {
+  padding-left: 164px;
+}
+
+//swiper 3
+
+.service-table {
+  display: none;
+}
+
+.service-item {
+  width: 260px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 16px;
+  background-color: $background-color;
+  border-radius: 8px;
+  position: relative;
+  align-items: start;
+  border: none;
+}
+
+.service-item__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-item__title {
+  font-size: 14px;
+  color: $lang-link-active-color;
+  margin: 0;
+  font-weight: normal;
+}
+
+.service-item__description {
+  font-size: 14px;
+  color: $lang-link-color;
+  margin: 0 0 16px 0;
+}
+
+.service-item__price-label {
+  font-size: 14px;
+  color: $lang-link-active-color;
+  margin: 0;
+}
+
+.service-item__price-value {
+  font-size: 14px;
+  color: $lang-link-color;
+  margin: 0 0 16px 0;
+}
+
+.service-item__term-label {
+  font-size: 14px;
+  color: $lang-link-active-color;
+  margin: 0;
+}
+
+.service-item__term-value {
+  font-size: 14px;
+  color: $lang-link-color;
+  margin: 0;
+}
+
+.service-item__button {
+  cursor: pointer;
+  width: 119px;
+  height: 32px;
+  background-color: $button-color-swiper;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.service-item__button:hover {
+  background-color: $button-color-swiper-hover;
+}
+
+.service-item__button-icon {
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 767px) {
+
+  .button-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    margin: 0;
+    row-gap: 16px;
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .swiper-wrapper3 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .swiper3 {
+    display: grid;
+  }
+
+  .swiper-slide {
+    margin: 0;
+    width: 224px;
+  }
+
+  .swiper-wrapper--collapsed {
+    max-height: 150px;
+    overflow: hidden;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-gradient:before {
+    display: none;
+  }
+
+  .right-link {
+    padding-left: 148px;
+  }
+
+  .service-table {
+    display: grid;
+    grid-template-columns: 370px 96px 101px auto;
+    width: 768px;
+    margin-left: 40px;
+    margin-right: auto;
+    padding-top: 8px;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: $lang-link-active-color;
+  }
+
+  .service-item {
+    width: 720px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .service-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 688px;
+    height: 1px;
+    background-color: $swiper-slide-border;
+    transform: translateX(-50%);
+  }
+
+  .service-item:last-child::after {
+    display: none;
+  }
+
+  .service-item__content {
+    display: grid;
+    grid-template-columns: 348px 96px 101px auto;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-item__title,
+  .service-item__label,
+  .service-item__price-label,
+  .service-item__term-label {
+    display: none;
+  }
+
+  .service-item__description {
+    margin: 0;
+  }
+
+  .service-item__price-value,
+  .service-item__term-value {
+    margin: auto;
+  }
+
+  .service-item__button {
+    position: absolute;
+    left: 585px;
+    top: 16px;
+  }
+
+  .service-item__button:hover {
+    background-color: $button-color-swiper-hover;
+  }
+
+  .service-item:first-child {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+
+  .service-item:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .swiper__title {
+    padding-left: 32px;
+  }
+
+  .swiper-wrapper {
+    column-gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .swiper-slide {
+    margin: 0;
+    width: 240px;
+  }
+
+  .button-toggle {
+    margin-left: 32px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-gradient:before {
+    display: none;
+  }
+
+  .right-link {
+    padding-left: 164px;
+  }
+
+  .swiper {
+    width: 1120px;
+    height: auto;
+  }
+
+  .service-item {
+    width: 1056px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    max-width: none;
+  }
+
+  .service-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1008px;
+    height: 1px;
+    background-color: $swiper-slide-border;
+    transform: translateX(-50%);
+  }
+
+  .service-item__content {
+    display: grid;
+    grid-template-columns: 470px 227px 192px auto;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-item__button {
+    position: static;
+  }
+
+  .service-table {
+    display: grid;
+    grid-template-columns: 560px 210px auto;
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

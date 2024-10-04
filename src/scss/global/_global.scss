@@ -1,0 +1,17 @@
+@import 'src/scss/global/_variables.scss';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 24px 16px;
+  display: flex;
+  background-color: $background-color;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $border-line-color;
+}

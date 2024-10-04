@@ -1,0 +1,165 @@
+@import 'src/scss/global/_variables.scss';
+
+.sidebar {
+  width: 320px;
+  height: 100%;
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  box-shadow: 1px 0 6px rgba(0, 0, 0, 0.3);
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar-hidden {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img {
+  display: block;
+  margin: 19px 80px 40px 19px;
+}
+
+.sidebar__top {
+  display: flex;
+  margin-right: 24px;
+}
+
+.sidebar-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 23px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-button:hover {
+  opacity: 0.7;
+}
+
+.close-button {
+  margin-left: auto;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  max-width: 320px;
+}
+
+.sidebar__menu-item {
+  position: relative;
+  padding: 12px 12px 12px 0;
+}
+
+.sidebar__link {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding-left: 24px;
+}
+
+.sidebar__link:hover,
+.sidebar__link-contacts:hover {
+  color: #7E7E82;
+}
+
+.sidebar__link:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 32px;
+  background-color: $link-color;
+  border-radius: 0 6px 6px 0;
+  transition: background-color 0.3s;
+}
+
+.sidebar__bottom {
+  display: flex;
+  flex-direction: column;
+  font-family: "TT Lakes", sans-serif;
+  position: absolute;
+  gap: 16px;
+  bottom: 0;
+}
+
+.sidebar__social {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 0 24px;
+  margin: 0;
+}
+
+.sidebar__social-item {
+  list-style: none;
+}
+
+.sidebar__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-style: normal;
+}
+
+.sidebar__link-contacts {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding-left: 24px;
+}
+
+.sidebar__phone {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.lang-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 24px;
+  align-items: center;
+}
+
+.lang-list__link {
+  text-decoration: none;
+  color: $lang-link-color;
+}
+
+.sidebar__lang-link.active, .sidebar__lang-link:active, .sidebar__lang-link:focus {
+  color: $lang-link-active-color;
+}
+
+@media (min-width: 1440px) {
+  .sidebar {
+    width: 320px;
+    transform: none;
+  }
+  .close-button {
+    display: none;
+  }
+  .sidebar__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,175 @@
+@import 'src/scss/global/_variables';
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal--active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+//.content-blurred {
+//filter: blur(8px);
+//transition: filter 0.3s ease-in-out;
+// pointer-events: none;
+// z-index: 9997;
+//}
+
+.modal__close-btn {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 24px 0 32px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.modal__close-img {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__title {
+  padding-left: 16px;
+  margin: 0 0 24px;
+  position: relative;
+  font-family: "TT Lakes", sans-serif;
+}
+
+.modal__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 40px;
+  background-color: $link-color;
+  border-radius: 2px;
+}
+
+.modal__form {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input,
+.modal__textarea {
+  margin: 0 0 15px 0;
+  border: 1px solid $swiper-slide-border;
+  border-radius: 10px;
+  color: $lang-link-active-color;
+  background-color: $background-color;
+  height: 48px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+}
+
+.modal__textarea {
+  height: 120px;
+  resize: none;
+  font-size: 16px;
+}
+
+.modal__policy {
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: $lang-link-active-color;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.modal__policy-link {
+  color: $button-color-swiper;
+  text-decoration: none;
+}
+
+.modal__submit-btn {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.modal--active ~ .main-content,
+.modal--active ~ .header {
+  pointer-events: none;
+}
+
+.modal--active {
+  pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 9999;
+    backdrop-filter: blur(12px);
+  }
+
+  .modal__close-btn {
+    background: none;
+    border: none;
+    padding: 24px 0 32px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: -80px;
+    margin-bottom: -65px;
+  }
+
+  .modal--active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .modal-overlay.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9998;
+  }
+
+  .modal {
+    width: 432px;
+    height: 100vh;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10000;
+  }
+}
