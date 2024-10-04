@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{4:function(i,n,e){"use strict";e.r(n),e.d(n,"initSwiper",(function(){return w}));e(0),e(1);var w=function(){window.innerWidth<=767&&new Swiper(".swiper",{slidesPerView:"auto",slidesOffsetAfter:16,pagination:{el:".swiper-pagination",clickable:!0}})}}}]);
+//# sourceMappingURL=1.bundle.js.map
